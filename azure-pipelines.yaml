@@ -50,6 +50,6 @@ stages:
           echo "##[group]Terraform Init/Plan/Apply"
           cd terraform
           terraform init -input=false 
-          terraform plan -input=false"
-          terraform apply -input=false -auto-approve"
+          terraform plan -input=false
+          terraform apply -input=false -auto-approve
           echo "##[endgroup]"
