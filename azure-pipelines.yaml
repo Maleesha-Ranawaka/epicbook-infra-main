@@ -34,10 +34,10 @@ stages:
         cp $(download_ssh_key.secureFilePath) ~/.ssh/id_ed25519.pub
 
         # Now copy into Terraform module path
-        cp $(download_ssh_key.secureFilePath) terraform/modules/compute/id_ed25519.pub
+        cp $(download_ssh_key.secureFilePath) terraform/id_ed25519.pub
 
-        echo "Listing contents of terraform/modules/compute/"
-        ls -al terraform/modules/compute/
+        echo "Listing contents of terraform/"
+        ls -al terraform/
       displayName: 'Extract SSH Public Key for Terraform'
 
     - task: AzureCLI@2
